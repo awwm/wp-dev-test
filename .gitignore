@@ -1,0 +1,14 @@
+# Ignore all themes except 'wis'
+wp-content/themes/*
+!wp-content/themes/wis/
+
+# Ignore all plugins except 'wis-api' and 'wis-events'
+wp-content/plugins/*
+!wp-content/plugins/wis-api/
+!wp-content/plugins/wis-events/
+
+# Ignore specific folders and files
+db_data/
+
+# Ignore all node_modules directories
+**/node_modules/
