@@ -33,14 +33,12 @@ services:
       WORDPRESS_DB_PASSWORD: wp-password
       WORDPRESS_DB_NAME: wordpress
     volumes:
-      - ./wp-content:/var/www/html/wp-content
-      - wp_data:/var/www/html/wp-content
+      # Please update the volumes path if you are not using Windows.
+      # If developing on a different environment, ensure the path is correct.
+      - /c/Users/admin1/projects/wp-dev-test/wp-content:/var/www/html/wp-content
     depends_on:
       - db
     restart: always
-    links:
-      - db
 
 volumes:
   db_data:
-  wp_data:
