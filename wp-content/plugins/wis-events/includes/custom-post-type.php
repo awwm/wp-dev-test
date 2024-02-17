@@ -10,8 +10,9 @@ function wis_events_register_post_type() {
             'public' => true,
             'has_archive' => true,
             'rewrite' => array('slug' => 'events'),
-            'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
-            'menu_icon' => 'dashicons-calendar-alt'
+            'supports' => array('title', 'editor', 'thumbnail'),
+            'menu_icon' => 'dashicons-calendar-alt',
+            'show_in_rest' => true,
         )
     );
 }

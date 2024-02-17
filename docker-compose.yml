@@ -32,6 +32,7 @@ services:
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wp-password
       WORDPRESS_DB_NAME: wordpress
+      WP_DEBUG: 'true'
     volumes:
       # Please update the volumes path if you are not using Windows.
       # If developing on a different environment, ensure the path is correct.

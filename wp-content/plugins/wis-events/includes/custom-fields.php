@@ -23,10 +23,3 @@ function wis_events_save_custom_fields($post_id) {
     update_post_meta($post_id, 'short_description', sanitize_text_field($_POST['short_description']));
 }
 add_action('save_post', 'wis_events_save_custom_fields');
-
-// Remove Custom Fields Meta Box
-function wis_events_remove_custom_fields_meta_box() {
-    remove_meta_box('postcustom', 'events', 'normal');
-    remove_meta_box('postexcerpt', 'events', 'normal');
-}
-add_action('admin_menu', 'wis_events_remove_custom_fields_meta_box');
