@@ -17,6 +17,7 @@ function wis_events_display_meta_box($post) {
     // Retrieve current value of the fields
     $event_date = get_post_meta($post->ID, 'event_date', true);
     $event_location = get_post_meta($post->ID, 'event_location', true);
+    $event_summary = get_post_meta($post->ID, 'event_summary', true);
 
     // HTML for fields
     ?>
@@ -28,20 +29,9 @@ function wis_events_display_meta_box($post) {
         <label for="event_location"><?php _e('Event Location', 'wis-events'); ?></label>
         <input type="text" id="event_location" name="event_location" value="<?php echo esc_attr($event_location); ?>" />
     </p>
+    <p>
+        <label for="event_summary"><?php _e('Event Summary', 'wis-events'); ?></label><br>
+        <textarea id="event_summary" name="event_summary" style="width: 100%;"><?php echo esc_textarea($event_summary); ?></textarea>
+    </p>
     <?php
 }
-
-// Add Short Description below the title
-function wis_events_display_short_description_field($post) {
-    // Retrieve current value of the field
-    $short_description = get_post_meta($post->ID, 'short_description', true);
-    ?>
-    <div id="short-description-block">
-        <label for="short_description"><?php _e('Short Description', 'wis-events'); ?></label><br>
-        <textarea id="short_description" name="short_description" style="width: 100%;"><?php echo esc_textarea($short_description); ?></textarea>
-    </div>
-    <?php
-    // Add nonce field for security
-    wp_nonce_field('save_event_details', 'event_details_nonce');
-}
-add_action('edit_form_after_title', 'wis_events_display_short_description_field');
