@@ -21,7 +21,7 @@ function wis_enqueue_scripts() {
     wp_enqueue_script(
         'wis-main-script',
         get_template_directory_uri() . '/dist/js/app.min.js',
-        [],
+        ['wp-element'],
         wp_get_theme()->get( 'Version' ),
         true
     );

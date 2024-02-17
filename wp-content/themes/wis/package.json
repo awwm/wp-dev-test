@@ -23,6 +23,7 @@
     "tailwindcss": "^3.4.1"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.10",
     "graceful-fs": "^4.2.11",
     "gulp-postcss": "^10.0.0",
     "sass": "^1.71.0"
