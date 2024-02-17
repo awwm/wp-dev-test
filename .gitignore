@@ -7,6 +7,9 @@ wp-content/plugins/*
 !wp-content/plugins/wis-api/
 !wp-content/plugins/wis-events/
 
+# Ignore uploads
+wp-content/uploads
+
 # Ignore specific folders and files
 db_data/
 
