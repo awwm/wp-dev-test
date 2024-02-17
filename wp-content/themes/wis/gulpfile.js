@@ -7,6 +7,7 @@ const uglify = require('gulp-uglify');
 const browserSync = require('browser-sync').create();
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const tailwindcss = require('tailwindcss');
 
 // Paths
 const paths = {
@@ -24,7 +25,10 @@ const paths = {
 function styles() {
     return gulp.src(paths.styles.src)
         .pipe(sass().on('error', sass.logError))
-        .pipe(postcss([autoprefixer()]))
+        .pipe(postcss([
+            tailwindcss(),
+            autoprefixer()
+        ]))
         .pipe(cleanCSS())
         .pipe(gulp.dest(paths.styles.dest))
         .pipe(browserSync.stream());
@@ -49,6 +53,9 @@ function watch() {
     gulp.watch(paths.scripts.src, scripts).on('change', browserSync.reload);
     gulp.watch('**/*.php').on('change', browserSync.reload);
 }
+
+// Define a "build" task
+gulp.task('build', gulp.series(gulp.parallel(styles, scripts)));
 
 // Default task
 exports.default = gulp.series(

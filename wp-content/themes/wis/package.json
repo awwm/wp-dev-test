@@ -15,7 +15,7 @@
   "devDependencies": {
     "browser-sync": "^3.0.2",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^9.0.0",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^5.1.0",
@@ -23,6 +23,7 @@
     "tailwindcss": "^3.4.1"
   },
   "dependencies": {
+    "graceful-fs": "^4.2.11",
     "gulp-postcss": "^10.0.0",
     "sass": "^1.71.0"
   }
