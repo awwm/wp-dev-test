@@ -8,6 +8,7 @@ Before starting with the project, ensure you have the following prerequisites in
 
 - [Docker](https://www.docker.com/get-started) - Docker is used for containerization and running the WordPress environment.
 - [Git](https://git-scm.com/) - Git is required for version control and managing the project repository.
+- [Node.js/npm](https://nodejs.org/) - Node.js and npm (Node Package Manager) are used for managing dependencies and running build scripts for the project. You can download and install Node.js/npm from the official website.
 
 ## Project Structure
 
