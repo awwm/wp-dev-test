@@ -33,5 +33,4 @@ The project is structured as follows:
 3. Run `docker-compose up` to start the WordPress environment.
 4. Access WordPress at `http://localhost:8000` in your web browser.
 5. Activate the `wis` theme and `wis-events` and `wis-api` plugins in the WordPress admin panel.
-6. Start developing and testing according to the provided tasks.
 
