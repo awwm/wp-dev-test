@@ -1,0 +1,13 @@
+// Add custom frontend styles here
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+// Define styles for the wrapper
+.wis-api-block-wrapper {
+    // Add styles specific to the block wrapper
+    
+    // Override Bootstrap styles for elements outside of .wis-api-block-wrapper
+    &,
+    & * {
+        @extend .table-responsive; // Inherit Bootstrap styles for all child elements
+    }
+}

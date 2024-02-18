@@ -1,0 +1,23 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "wis-api/api-block",
+    "version": "1.0.0",
+    "title": "API Block",
+    "category": "widgets",
+    "icon": "admin-site",
+    "description": "Gutenberg block for displaying API data",
+    "supports": {
+		"html": false
+	},
+    "attributes": {
+        "teamData": {
+            "type": "array",
+            "default": []
+        }
+    },
+    "textdomain": "wis-api",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
