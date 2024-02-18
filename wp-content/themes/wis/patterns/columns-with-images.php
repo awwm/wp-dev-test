@@ -10,7 +10,7 @@
  */
 ?>
 <!-- wp:columns {"align":"wide"} -->
-<div class="wp-block-columns alignwide">
+<div class="wp-block-columns alignwide prose">
 	<!-- wp:column -->
 	<div class="wp-block-column">
 		<!-- wp:image {"align":"center","width":200,"height":200,"scale":"cover","sizeSlug":"full","linkDestination":"none","className":"is-style-rounded"} -->

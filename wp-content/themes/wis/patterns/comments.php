@@ -12,7 +12,7 @@
 <!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group">
 		<!-- wp:comments -->
-		<div class="wp-block-comments">
+		<div class="wp-block-comments prose">
 			<!-- wp:heading -->
 			<h2><?php esc_html_e( 'Comments', 'wis' ); ?></h2>
 			<!-- /wp:heading -->

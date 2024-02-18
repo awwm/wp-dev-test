@@ -10,7 +10,7 @@
  */
 ?>
 <!-- wp:query {"query":{"perPage":5,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"layout":{"type":"constrained"}} -->
-<div class="wp-block-query">
+<div class="wp-block-query prose">
 	<!-- wp:post-template -->
 		<!-- wp:post-title {"level":2,"isLink":true} /-->
 		<!-- wp:post-featured-image {"isLink":true} /-->
