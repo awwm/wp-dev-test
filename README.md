@@ -34,3 +34,10 @@ The project is structured as follows:
 4. Access WordPress at `http://localhost:8000` in your web browser.
 5. Activate the `wis` theme and `wis-events` and `wis-api` plugins in the WordPress admin panel.
 
+## Additional Tasks
+
+Here are additional tasks that are documented separately:
+
+- [Task 7: Implement error handling for API requests and briefly describe caching strategies](https://github.com/awwm/wp-dev-test/blob/master/TASK7.md)
+- [Task 9: Outline steps to optimize site speed and integrate a popular SEO plugin, explaining key features](https://github.com/awwm/wp-dev-test/blob/master/TASK9.md)
+
