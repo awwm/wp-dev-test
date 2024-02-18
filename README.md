@@ -1,6 +1,6 @@
 # WordPress Development Test
 
-Welcome to the WordPress Development Test repository! This project contains code related to WordPress development, Gutenberg blocks, API integration, and SEO optimization.
+This repository showcases a WordPress project exploring various tools and methods. The theme is built using Tailwind CSS and Gulp.js for styling and workflow automation. Two custom plugins, "Wis Events" and "Wis API Block," are developed using standard WordPress tools like Gutenberg blocks and WordPress scripts. These plugins add features like event management and seamless integration of external data. The project also emphasizes SEO optimization for better website visibility. Overall, it's a demonstration of how to create dynamic WordPress websites using popular web development technologies.
 
 ## Prerequisites
 
