@@ -27,4 +27,4 @@ You can customize the plugin further by modifying the PHP files in the plugin di
 
 ## Screenshots
 
-![Event Plugin Screenshot](https://example.com/path/to/screenshot.png)
+![Event Plugin Screenshot](https://github.com/awwm/wp-dev-test/blob/master/screenshots/edit-events.png)
