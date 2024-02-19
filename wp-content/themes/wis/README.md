@@ -55,3 +55,7 @@ The following scripts are available for managing the theme:
 - **build**: Builds the theme for production.
 - **watch**: Watches for changes and runs Gulp tasks accordingly.
 - **test**: Placeholder for testing scripts.
+
+## Screenshots
+
+![Event Plugin Screenshot](https://github.com/awwm/wp-dev-test/blob/master/screenshots/Blocks.png)
