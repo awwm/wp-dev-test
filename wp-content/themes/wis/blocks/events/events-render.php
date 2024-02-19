@@ -31,7 +31,7 @@
             echo '<h2>' . esc_html($blockTitle) . '</h2>';
         }
         if ($blockDescription) {
-            echo '<div class="block-description">' . wpautop(esc_html($blockDescription)) . '</div>';
+            echo '<div class="block-description">' . wpautop($blockDescription) . '</div>';
         }
         echo '</div>';
     }

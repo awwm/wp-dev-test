@@ -14,6 +14,10 @@
     "teamData": {
       "type": "array",
       "default": []
+    },
+    "error": {
+      "type": "string",
+      "default": ""
     }
   },
   "textdomain": "wis-api",

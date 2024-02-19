@@ -17,7 +17,7 @@ registerBlockType('wis/events', {
         blockDescription: {
             type: 'string',
             source: 'html', // Use HTML for the RichText component
-            selector: 'p', // Target the <p> tag for the block description
+            selector: 'div', // Target the <div> tag for the block description
             default: '', // Default value for block description
         },
         numberOfPosts: {
