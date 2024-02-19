@@ -1,5 +1,15 @@
 main {
     .wp-block-group__inner-container {
         @apply xl:py-12 py-6 xl:px-12 px-6;
+
+        .events {
+            .event {
+                .featured-image {
+                    img {
+                        @apply w-full;
+                    }
+                }
+            }
+        }
     }
 }
