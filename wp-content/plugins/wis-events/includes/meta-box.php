@@ -14,6 +14,9 @@ add_action('add_meta_boxes', 'wis_events_add_meta_box');
 
 // Display Custom Fields
 function wis_events_display_meta_box($post) {
+    // Add nonce field
+    wp_nonce_field('save_event_details', 'event_details_nonce');
+    
     // Retrieve current value of the fields
     $event_date = get_post_meta($post->ID, 'event_date', true);
     $event_location = get_post_meta($post->ID, 'event_location', true);

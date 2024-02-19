@@ -20,6 +20,6 @@ function wis_events_save_custom_fields($post_id) {
     // Save fields
     update_post_meta($post_id, 'event_date', sanitize_text_field($_POST['event_date']));
     update_post_meta($post_id, 'event_location', sanitize_text_field($_POST['event_location']));
-    update_post_meta($post_id, 'event_summary', sanitize_text_field($_POST['event_summary']));
+    update_post_meta($post_id, 'event_summary', wp_kses_post($_POST['event_summary']));
 }
 add_action('save_post', 'wis_events_save_custom_fields');
