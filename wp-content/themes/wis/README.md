@@ -59,3 +59,4 @@ The following scripts are available for managing the theme:
 ## Screenshots
 
 ![Event Plugin Screenshot](https://github.com/awwm/wp-dev-test/blob/master/screenshots/Blocks.png)
+![Event and API Error frontend Screenshot](https://github.com/awwm/wp-dev-test/blob/master/screenshots/event-api-error.png)

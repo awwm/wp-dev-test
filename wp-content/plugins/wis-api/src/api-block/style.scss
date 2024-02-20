@@ -10,4 +10,12 @@
     & * {
         @extend .table-responsive; // Inherit Bootstrap styles for all child elements
     }
+
+    .wis-error {
+        @extend .text-light;
+        @extend .bg-danger;
+        @extend .text-center;
+        @extend .fs-2;
+        @extend .my-5;
+    }
 }

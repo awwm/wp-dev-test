@@ -33,7 +33,7 @@ const Edit = ({ attributes, setAttributes }) => {
 
             {/* Render either the error message or the table */}
             {error ? (
-                <p>{error}</p>
+                <p className="wis-error">{error}</p>
             ) : (
                 <div className="table-responsive">
                     <table className="table table-bordered">

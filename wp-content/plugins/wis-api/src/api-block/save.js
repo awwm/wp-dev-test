@@ -9,7 +9,7 @@ const Save = ({ attributes }) => {
         <div className="wis-api-block-wrapper">{/* Add a wrapper class with the plugin name */}
             {/* Conditionally render the error message */}
             {error ? (
-                <p>{error}</p>
+                <p className="wis-error">{error}</p>
             ) : (
                 <>
                     {/* Render the heading "Team Data" */}

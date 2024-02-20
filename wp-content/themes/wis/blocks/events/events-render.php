@@ -38,7 +38,7 @@ function render_events_block($attributes) {
 
     // Display events
     if ($events_query->have_posts()) :
-        echo '<div class="events">';
+        echo '<div class="events flex flex-wrap justify-between gap-8 mt-4">';
         $row_counter = 0; // Initialize row counter
 
         while ($events_query->have_posts()) :
@@ -48,29 +48,37 @@ function render_events_block($attributes) {
             $event_summary = get_post_meta(get_the_ID(), 'event_summary', true);
             $event_category = wp_get_post_terms(get_the_ID(), 'event_category', array('fields' => 'names'));
             ?>
-            <article class="event prose flex <?php echo $row_counter % 2 == 0 ? 'md:flex-row' : 'md:flex-row-reverse'; ?> flex-col w-full max-w-full gap-8">
+            <article class="event flex flex-col lg:w-[30%] md:w-[45%] w-full">
                 <?php if ($showFeaturedImage && has_post_thumbnail()) : ?>
-                    <div class="featured-image md:w-3/5 w-full">
+                    <div class="featured-image">
                         <?php the_post_thumbnail(); ?>
                     </div>
                 <?php endif; ?>
-                <div class="event-content md:w-2/5 w-full">
-                    <h3><?php the_title(); ?></h3>
-                    <?php if (!empty($event_category)) : ?>
-                        <p class="event-category"><?php echo esc_html(implode(', ', $event_category)); ?></p>
-                    <?php endif; ?>
-                    <?php if ($event_date) : ?>
-                        <p class="event-meta"><strong>Date:</strong> <?php echo esc_html($event_date); ?></p>
-                    <?php endif; ?>
-                    <?php if ($event_location) : ?>
-                        <p class="event-meta"><strong>Location:</strong> <?php echo esc_html($event_location); ?></p>
-                    <?php endif; ?>
-                    <div class="event-summary">
-                        <?php echo wpautop(esc_html($event_summary)); ?>
+                <div class="event-content relative px-4 -mt-16">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <?php if (!empty($event_category)) : ?>
+                            <div class="event-category flex items-baseline">
+                                <span class="bg-teal-200 text-teal-800 text-xs px-2 inline-block rounded-full  uppercase font-semibold tracking-wide">
+                                    <?php echo esc_html(implode(', ', $event_category)); ?>
+                                </span>
+                            </div>
+                        <?php endif; ?>
+                        <h4 class="mt-3 text-xl font-semibold uppercase leading-tight truncate"><?php the_title(); ?></h4>
+                        <div class="event-summary">
+                            <?php echo wpautop(esc_html($event_summary)); ?>
+                        </div>
+                        <?php if ($event_date) : ?>
+                            <div class="event-meta text-gray-600 uppercase text-xs font-semibold tracking-wider mt-2"><strong>Date:</strong> <?php echo esc_html($event_date); ?></div>
+                        <?php endif; ?>
+                        <?php if ($event_location) : ?>
+                            <div class="event-meta text-gray-600 uppercase text-xs font-semibold tracking-wider"><strong>Location:</strong> <?php echo esc_html($event_location); ?></div>
+                        <?php endif; ?>
+                        <?php if ($linkToDetailPage) : ?>
+                            <div class="mt-4">
+                                <a href="<?php the_permalink(); ?>" class="read-more text-teal-600 text-md font-semibold">Read More</a>
+                            </div>
+                        <?php endif; ?>
                     </div>
-                    <?php if ($linkToDetailPage) : ?>
-                        <a href="<?php the_permalink(); ?>" class="read-more">Read More</a>
-                    <?php endif; ?>
                 </div>
                 <div style="clear:both;"></div>
             </article>
